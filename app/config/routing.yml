@@ -1,0 +1,11 @@
+store:
+    resource: "@StoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+produit:
+    resource: "@StoreBundle/Resources/config/routing/produit.yml"
+    prefix:   /produit

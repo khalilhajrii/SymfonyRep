@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div
+        id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Inner -->
+        <div
+            class="carousel-inner">
+            <!-- Single item -->
+            <div class="carousel-item active">
+                <img src="{{ asset('IMG/categories.jpg') }}" alt="Canturla Logo Min"></div>
+            </div>
+        </div>
+        <!-- Inner -->
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+    <div class="table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nom du categorie</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+
+
+                </tr>
+            </thead>
+
+            {% for c in catg %}
+                <tbody>
+                    <tr>
+                        <th scope="row">{{c.id}}</th>
+                        <td>{{c.nom}}</td>
+                        <td>
+                            <a class="btn btn-primary"href="{{path('categorie_modifier',{'id': c.id})}}">Modifier</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-primary" href="{{path('categorie_supprimer',{'id': c.id})}}">Supprimer</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+{% endblock %}

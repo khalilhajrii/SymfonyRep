@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div
+        id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Inner -->
+        <div
+            class="carousel-inner">
+            <!-- Single item -->
+            <div class="carousel-item active">
+                <img src="{{ asset('IMG/OWNERS.jpg') }}" alt="Canturla Logo Min"></div>
+            </div>
+        </div>
+        <!-- Inner -->
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+    <div class="table">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prenom</th>
+                <th scope="col">Date de naissance</th>
+                <th scope="col">Sexe</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+
+
+            </tr>
+        </thead>
+
+        {% for owner in own %}
+            <tbody>
+                <tr>
+                    <th scope="row">{{owner.id}}</th>
+                    <td>{{owner.nom}}</td>
+                    <td>{{owner.prenom}}</td>
+                    <td>{{owner.datedenaissance|date("d/M/Y")}}</td>
+                    <td>{{owner.Sexe}}</td>
+                    <td>{{owner.phone}}</td>
+                    <td>{{owner.email}}</td>
+                    <td><a class="btn btn-primary" href="{{path('owner_modifier',{'id': owner.id})}}">Modifier</a></td>
+                    <td><a class="btn btn-primary" href="{{path('owner_supprimer',{'id': owner.id})}}">Supprimer</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+{% endblock %}

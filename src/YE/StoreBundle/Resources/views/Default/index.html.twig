@@ -1,0 +1,181 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <!-- Carousel wrapper -->
+    <div
+        id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Inner -->
+        <div
+            class="carousel-inner">
+            <!-- Single item -->
+            <div class="carousel-item active">
+                <img src="{{ asset('IMG/slider.PNG') }}" alt="Canturla Logo Min"></div>
+            </div>
+        </div>
+        <!-- Inner -->
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+    <!-- Carousel wrapper -->
+
+
+    <!-- Feature section -->
+    <section
+        class="text-center my-5">
+
+        <!-- Section heading -->
+        <h2 class="h1-responsive font-weight-bold my-5">Our Values</h2>
+        <!-- Section description -->
+        <p class="lead grey-text w-responsive mx-auto mb-5">Our values are fuelled by relentlessly consistent behaviours we call our core habits.
+
+        </p>
+
+        <!-- Grid row -->
+        <div
+            class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-4">
+
+                <i class="fas fa-chart-area fa-3x red-text"></i>
+                <h5 class="font-weight-bold my-4">Unique products</h5>
+                <p class="grey-text mb-md-0 mb-5">Our products are sold as a limited-edition campaign, we don't produce the same campaign twice, each design is custom drawn by our team
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4">
+
+                <i class="fas fa-book fa-3x cyan-text"></i>
+                <h5 class="font-weight-bold my-4">Transparency</h5>
+                <p class="grey-text mb-md-0 mb-5">
+                    We value honesty above all, and it shows through our interactions, sales, and policies
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4">
+
+                <i class="far fa-comments fa-3x orange-text"></i>
+                <h5 class="font-weight-bold my-4">Simplicity</h5>
+                <p class="grey-text mb-0">Working with us is extremely easy and straightforward, if you want to work with us just shoot us an email at team@makeship.com
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </section>
+
+
+    <!--galerie-->
+
+    <div
+        class="row">
+
+        <!-- Grid column -->
+        <div
+            class="col-md-4 mb-4">
+
+            <!-- Card -->
+            <div class="">
+
+                <div class="view zoom overlay z-depth-2 rounded">
+                    <img class="img-fluid w-100" src="https://cdn.shopify.com/s/files/1/0125/8261/7145/products/Cliccy_Kitty_2_Plush_Toy-1_c3b74970-5a31-4758-8495-df7df02e3404_2000x.png?v=1617205842" alt="Sample"></div>
+
+                    <div class="text-center pt-4">
+
+                        <h5>Fantasy Cliccy Kitty 2.0 Plush</h5>
+                        <p class="mb-2 text-muted text-uppercase small">By Piew Die Pie</p>
+
+
+                    </div>
+
+                </div>
+                <!-- Card -->
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div
+                class="col-md-4 mb-4">
+
+                <!-- Card -->
+                <div class="">
+
+                    <div class="view zoom overlay z-depth-2 rounded">
+                        <img class="img-fluid w-100" src="https://cdn.shopify.com/s/files/1/0125/8261/7145/products/Turnip_Boy_Plush_Toy-1_2000x.png?v=1619456770" alt="Sample">
+                            <h4 class="mb-0">
+                                <span class="badge badge-dark badge-pill badge-news">Sold out</span>
+                            </h4>
+
+                        </div>
+
+                        <div class="text-center pt-4">
+
+                            <h5>Turnip Boy Plush</h5>
+                            <p class="mb-2 text-muted text-uppercase small">By Piew Die Pie
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <!-- Card -->
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div
+                    class="col-md-4 mb-4">
+
+                    <!-- Card -->
+                    <div class="">
+
+                        <div class="view zoom overlay z-depth-2 rounded">
+                            <img class="img-fluid w-100" src="https://cdn.shopify.com/s/files/1/0125/8261/7145/products/Grumpy_OneTopic_Plush_toy-1_2000x.png?v=1618314594" alt="Sample">
+                                <h4 class="mb-0">
+                                    <span class="badge badge-primary badge-pill badge-news">Sale</span>
+                                </h4>
+
+                            </div>
+                            <div class="text-center pt-4">
+
+                                <h5>Grumpy Onetopic Plush</h5>
+                                <p class="mb-2 text-muted text-uppercase small">By OneTopicAtATime</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            
+
+        {% endblock %}

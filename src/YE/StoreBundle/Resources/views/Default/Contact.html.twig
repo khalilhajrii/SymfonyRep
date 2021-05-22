@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <!-- Carousel wrapper -->
+    <div
+        id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Inner -->
+        <div
+            class="carousel-inner">
+            <!-- Single item -->
+            <div class="carousel-item active">
+                <img src="{{ asset('IMG/Contact.jpg') }}" alt="Canturla Logo Min"></div>
+            </div>
+        </div>
+        <!-- Inner -->
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+    <!-- Carousel wrapper -->
+
+    <div class="about-section paddingTB60 gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sm-6">
+                    <div class="about-title clearfix">
+                        <h1>WHAT IS
+                            <span>MAKESHIP ?</span>
+                        </h1>
+                        <h3>Small description
+                        </h3>
+                        <p class="about-paddingB">Makeship is a Tunisian TN  crowdfunding platform for content creators. Through collaborations with creators, we enable the design and creation of high-quality, limited edition custom products and experiences.
+                            
+                            We are not a traditional crowdfunding platform, we design, manufacture, test, and ship all the products we put our name on. Our approach for campaigns is extremely data-centric, we help each of our creators to launch a successful campaign.
+                            
+                            Simply put, we are the easiest way to launch a high quality product.
+                        </p>
+
+                        <div class="about-icons">
+                            <ul>
+                                <li><a href="https://www.facebook.com/"><i id="social-fb" class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com/"><i id="social-tw" class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://plus.google.com/"><i id="social-gp" class="fab fa-google"></i></a></li>
+                                <li><a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fab fa-instagram"></i></a></li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-6">
+                    <div class="about-img">
+                        <img src="https://devitems.com/preview/appmom/img/mobile/2.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>X
+    {% endblock %}

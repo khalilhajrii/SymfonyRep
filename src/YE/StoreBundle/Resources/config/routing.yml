@@ -1,0 +1,51 @@
+store_produit:
+    resource: "@StoreBundle/Resources/config/routing/produit.yml"
+    prefix:   /produit
+
+store_homepage:
+    path:     /
+    defaults: { _controller: StoreBundle:Default:index }
+
+contact:
+    path:     /contact
+    defaults: { _controller: StoreBundle:Contact:index }
+
+login:
+    path:     /login
+    defaults: { _controller: StoreBundle:Login:login }
+
+
+#Ctegorie CRUD
+categorie_ajout:
+    path:     /categorie/ajout
+    defaults: { _controller: StoreBundle:Categorie:ajout }
+
+categorie:
+    path:     /categorie
+    defaults: { _controller: StoreBundle:Categorie:affiche }
+
+categorie_modifier:
+    path:     /categorie/modifier/{id}
+    defaults: { _controller: StoreBundle:Categorie:modifier }
+
+categorie_supprimer:
+    path:     /categorie/supprimer/{id}
+    defaults: { _controller: StoreBundle:Categorie:supprimer }
+
+
+#owner CRUD
+owner_ajout:
+    path:     /owner/ajout
+    defaults: { _controller: StoreBundle:Owner:ajout }
+
+owner:
+    path:     /owner
+    defaults: { _controller: StoreBundle:Owner:affiche }
+
+owner_modifier:
+    path:     /owner/modifier/{id}
+    defaults: { _controller: StoreBundle:Owner:modifier }
+
+owner_supprimer:
+    path:     /owner/supprimer/{id}
+    defaults: { _controller: StoreBundle:Owner:supprimer }

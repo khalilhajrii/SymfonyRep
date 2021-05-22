@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div
+        id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Inner -->
+        <div
+            class="carousel-inner">
+            <!-- Single item -->
+            <div class="carousel-item active">
+                <img src="{{ asset('IMG/produits.jpg') }}" alt="Canturla Logo Min"></div>
+            </div>
+        </div>
+        <!-- Inner -->
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+    <form method="post">
+        <div class="add">
+            <table>
+                <thead>
+                    <tr>
+                        <td>{{ form_label(edit_form.nom) }}
+                        </td>
+                        <td>{{ form_widget(edit_form.nom) }}
+                            {{ form_errors(edit_form.nom) }}
+                        </tr>
+
+                        <tr>
+                            <td>{{ form_label(edit_form.description) }}
+                            </td>
+                            <td>{{ form_widget(edit_form.description) }}
+                                {{ form_errors(edit_form.description) }}
+                            </tr>
+
+                            <tr>
+                                <td>{{ form_label(edit_form.prix) }}
+                                </td>
+                                <td>{{ form_widget(edit_form.prix) }}
+                                    {{ form_errors(edit_form.prix) }}
+                                </tr>
+
+                                <tr>
+                                    <td>{{ form_label(edit_form.categorie) }}
+                                    </td>
+                                    <td>{{ form_widget(edit_form.categorie) }}
+                                        {{ form_errors(edit_form.categorie) }}
+                                    </tr>
+
+                                    <tr>
+                                        <td>{{ form_label(edit_form.owner) }}
+                                        </td>
+                                        <td>{{ form_widget(edit_form.owner) }}
+                                            {{ form_errors(edit_form.owner) }}
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="submit" class=" btn btn-primary" value="register"/>
+                                                <a class="btn btn-primary" href="{{ path('produit_index') }}">Back to the list</a>
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                </div>
+                                {{ form_rest(edit_form) }}
+                            </tr>
+                        </tr>
+                    </thead>
+                </form>
+
+
+            {% endblock %}
