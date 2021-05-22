@@ -1,4 +1,4 @@
-Fist step switch repository from origin to Master
+Fist step switch repository from Main to Master
 ========================
 
 
